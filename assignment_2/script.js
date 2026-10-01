@@ -242,21 +242,15 @@ function fetchWeather(destination, weatherParagraph) {
 
         .then(function(locationData) {
 
-            if (
-                !locationData.results ||
-                locationData.results.length === 0
-            ) {
+            if (!locationData.results || locationData.results.length === 0) {
                 throw new Error("Location was not found.");
             }
 
-            const location =
-                locationData.results[0];
+            const location = locationData.results[0];
 
-            const latitude =
-                location.latitude;
+            const latitude = location.latitude;
 
-            const longitude =
-                location.longitude;
+            const longitude = location.longitude;
 
 
             const weatherUrl =
@@ -283,8 +277,7 @@ function fetchWeather(destination, weatherParagraph) {
 
         .then(function(weatherData) {
 
-            const temperature =
-                weatherData.current.temperature_2m;
+            const temperature = weatherData.current.temperature_2m;
 
             weatherParagraph.textContent =
                 "Current Temperature: " +
@@ -297,8 +290,7 @@ function fetchWeather(destination, weatherParagraph) {
 
             console.log(error);
 
-            weatherParagraph.textContent =
-                "Weather information is unavailable.";
+            weatherParagraph.textContent = "Weather information is unavailable.";
 
         });
 

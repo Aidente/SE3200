@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 3</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="container">
+
+            <h1 id="nameHeading">
+                Song Posts
+            </h1>
+
+            <form id="recommendation-form">
+                <label for="title">Song Title</label>
+                <input id="title" name="title" type="text">
+
+                <label for="artist">Artist</label>
+                <input id="artist" name="artist" type="text">
+
+                <label for="reason">Reason</label>
+                <textarea id="reason" name="reason"></textarea>
+
+                <button id="submit_button" type="submit">
+                    POST
+                </button>
+            </form>
+            <p id="error-message"></p>
+            
+            <div id="messages"></div>
+
+        </div>
+        <script src="app.js"></script>
+    </body>
+
+</html>

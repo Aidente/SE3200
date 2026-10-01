@@ -1,0 +1,107 @@
+.container {
+    display: grid;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    gap: 15px;
+
+    justify-items: center;
+
+    text-align: center;
+
+    font-family: sans-serif;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #82c2ed;
+
+    margin: 0;
+
+    min-height: 100vh;
+}
+
+
+#nameHeading {
+    border-bottom: 3px solid black;
+
+    padding-bottom: 1px;
+}
+
+
+#recommendation-form {
+    display: grid;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 600px;
+
+    background-color: #65a1ca;
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+#recommendation-form input,
+#recommendation-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    font-size: 16px;
+}
+
+#recommendation-form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+#submit_button {
+    padding: 10px 20px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+#messages {
+    width: 100%;
+    max-width: 700px;
+}
+
+.message-card {
+    background-color: #65a1ca;
+    margin: 15px 0;
+    padding: 16px 20px;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.message-card h3 {
+    margin: 0 0 6px 0;
+}
+
+.artist {
+    margin: 0 0 8px 0;
+}
+
+.reason {
+    margin: 0;
+    font-size: 16px;
+    font-style: italic;
+}
