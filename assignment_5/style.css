@@ -1,0 +1,473 @@
+.container {
+    display: grid;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    gap: 15px;
+
+    justify-items: center;
+
+    text-align: center;
+
+    font-family: sans-serif;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #82c2ed;
+
+    margin: 0;
+
+    min-height: 100vh;
+}
+
+
+#nameHeading {
+    border-bottom: 3px solid black;
+
+    padding-bottom: 1px;
+}
+
+
+#recommendation-form {
+    display: grid;
+
+    gap: 10px;
+
+    width: 100%;
+    max-width: 600px;
+
+    background-color: #65a1ca;
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+
+#recommendation-form > label {
+    text-align: left;
+
+    font-size: larger;
+
+    font-weight: bold;
+}
+
+
+#recommendation-form input[type="text"],
+#recommendation-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    font-size: 16px;
+
+    border: 1px solid #555;
+
+    border-radius: 5px;
+}
+
+
+#recommendation-form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+#submit_button {
+    padding: 10px 20px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border: none;
+
+    border-radius: 5px;
+}
+
+
+#submit_button:hover {
+    opacity: 0.9;
+}
+
+
+#error-message {
+    color: darkred;
+
+    font-weight: bold;
+
+    margin: 0;
+}
+
+
+#messages {
+    width: 100%;
+
+    max-width: 700px;
+}
+
+
+.message-card {
+    background-color: #65a1ca;
+
+    margin: 15px 0;
+
+    padding: 16px 20px;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+    overflow-wrap: anywhere;
+}
+
+
+.message-card h3 {
+    margin: 0 0 6px 0;
+}
+
+
+.artist {
+    margin: 0 0 8px 0;
+
+    font-weight: bold;
+}
+
+
+.reason {
+    margin: 0 0 8px 0;
+
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+
+/* Rating section */
+
+.rating-field {
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    text-align: left;
+}
+
+
+.rating-field legend {
+    font-size: larger;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+.star-rating {
+    display: flex;
+
+    flex-direction: row-reverse;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+}
+
+
+.star-rating input {
+    display: none;
+}
+
+
+.star-rating label {
+    font-size: 32px;
+
+    cursor: pointer;
+
+    color: #555;
+
+    transition: color 0.15s ease;
+}
+
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}
+
+/* Assignment 5: authentication UI                        */
+
+/* Make sure the hidden attribute always wins over display rules */
+[hidden] {
+    display: none !important;
+}
+
+
+.top-bar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 25px;
+
+    background-color: #2f6f99;
+
+    color: white;
+
+    font-family: sans-serif;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.brand {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+#user-bar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+#songs-section {
+    display: grid;
+
+    gap: 15px;
+
+    justify-items: center;
+
+    width: 100%;
+}
+
+
+.panel {
+    width: 100%;
+
+    max-width: 450px;
+
+    background-color: #65a1ca;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.tabs {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    margin-bottom: 15px;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    border: 2px solid #2f6f99;
+}
+
+
+.tab {
+    padding: 10px;
+
+    font-size: 16px;
+
+    border: none;
+
+    background-color: #cfe6f6;
+
+    color: #1d4a68;
+
+    cursor: pointer;
+}
+
+
+.tab.active {
+    background-color: #2f6f99;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+.stacked-form {
+    display: grid;
+
+    gap: 8px;
+
+    text-align: left;
+}
+
+
+.stacked-form label {
+    font-weight: bold;
+}
+
+
+.stacked-form input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    font-size: 16px;
+
+    border: 1px solid #555;
+
+    border-radius: 5px;
+}
+
+
+.name-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+.name-row > div {
+    display: grid;
+
+    gap: 8px;
+}
+
+
+.primary-button {
+    margin-top: 6px;
+
+    padding: 10px 20px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #2f6f99;
+
+    color: white;
+}
+
+
+.primary-button:hover {
+    background-color: #255a7d;
+}
+
+
+.secondary-button {
+    padding: 6px 14px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    border: 2px solid white;
+
+    border-radius: 5px;
+
+    background-color: transparent;
+
+    color: white;
+}
+
+
+.secondary-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+#auth-message {
+    margin: 0 0 10px 0;
+
+    font-weight: bold;
+}
+
+
+#auth-message.success {
+    color: #0b5d1e;
+}
+
+
+#auth-message.error {
+    color: darkred;
+}
+
+
+.card-buttons {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.edit-button,
+.delete-button {
+    padding: 6px 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    color: white;
+}
+
+
+.edit-button {
+    background-color: #2f6f99;
+}
+
+
+.delete-button {
+    background-color: #a33;
+}
+
+
+.empty-note {
+    font-style: italic;
+}
+
+
+@media (max-width: 500px) {
+    .name-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Song Recommendation Wall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="top-bar">
+        <span class="brand">♪ Song Wall</span>
+
+        <!-- Only shown once logged in -->
+        <div id="user-bar" hidden>
+            <span id="welcome-text"></span>
+            <button id="logout-button" type="button" class="secondary-button">
+                Log Out
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h1 id="nameHeading">
+            Song Posts
+        </h1>
+
+        <!-- Authentication (logged-out view) -->
+        <section id="auth-section" class="panel" hidden>
+
+            <div class="tabs" role="tablist">
+                <button id="login-tab" type="button" class="tab active"
+                        role="tab" aria-selected="true">
+                    Log In
+                </button>
+                <button id="register-tab" type="button" class="tab"
+                        role="tab" aria-selected="false">
+                    Register
+                </button>
+            </div>
+
+            <p id="auth-message" role="status"></p>
+
+            <!-- Login -->
+            <form id="login-form" class="stacked-form">
+                <label for="login-email">Email</label>
+                <input id="login-email" name="email" type="email"
+                       autocomplete="email" required>
+
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password"
+                       autocomplete="current-password" required>
+
+                <button type="submit" class="primary-button">Log In</button>
+            </form>
+
+            <!-- Registration -->
+            <form id="register-form" class="stacked-form" hidden>
+                <div class="name-row">
+                    <div>
+                        <label for="register-first-name">First Name</label>
+                        <input id="register-first-name" name="first_name" type="text"
+                               autocomplete="given-name" required>
+                    </div>
+                    <div>
+                        <label for="register-last-name">Last Name</label>
+                        <input id="register-last-name" name="last_name" type="text"
+                               autocomplete="family-name" required>
+                    </div>
+                </div>
+
+                <label for="register-email">Email</label>
+                <input id="register-email" name="email" type="email"
+                       autocomplete="email" required>
+
+                <label for="register-password">Password</label>
+                <input id="register-password" name="password" type="password"
+                       autocomplete="new-password" minlength="8" required>
+
+                <label for="register-confirm">Confirm Password</label>
+                <input id="register-confirm" name="confirm" type="password"
+                       autocomplete="new-password" minlength="8" required>
+
+                <button type="submit" class="primary-button">Create Account</button>
+            </form>
+        </section>
+
+        <!-- Songs (restricted, logged-in view) -->
+        <section id="songs-section" hidden>
+
+            <form id="recommendation-form">
+
+                <!-- Song Title -->
+                <label for="title">Song Title</label>
+                <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    placeholder="Enter song title"
+                    required
+                >
+
+                <!-- Artist -->
+                <label for="artist">Artist</label>
+                <input
+                    id="artist"
+                    name="artist"
+                    type="text"
+                    placeholder="Enter artist name"
+                    required
+                >
+
+                <!-- Reason -->
+                <label for="reason">Reason</label>
+                <textarea
+                    id="reason"
+                    name="reason"
+                    placeholder="Why do you recommend this song?"
+                    required
+                ></textarea>
+
+                <!-- Genre -->
+                <label for="genre">Genre</label>
+                <input
+                    id="genre"
+                    name="genre"
+                    type="text"
+                    placeholder="Enter genre"
+                    required
+                >
+
+                <!-- Star Rating -->
+                <fieldset class="rating-field">
+                    <legend>Rating</legend>
+
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5" title="5 stars">★</label>
+
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 stars">★</label>
+
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 stars">★</label>
+
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 stars">★</label>
+
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 star">★</label>
+                    </div>
+                </fieldset>
+
+                <!-- Submit -->
+                <button id="submit_button" type="submit" class="primary-button">
+                    Post Recommendation
+                </button>
+
+                <!-- Error Messages -->
+                <p id="error-message" role="alert"></p>
+
+            </form>
+
+            <!-- Saved Recommendations -->
+            <h2>Song Recommendations</h2>
+
+            <div id="messages"></div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
